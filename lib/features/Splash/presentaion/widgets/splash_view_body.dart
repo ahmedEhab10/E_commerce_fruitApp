@@ -1,4 +1,8 @@
+import 'package:e_commerce/features/On%20Baoarding/Presentaion/on_boarding_view.dart';
+import 'package:e_commerce/main.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -22,6 +26,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
         Tween<double>(begin: 0.2, end: 1).animate(animationController!);
 
     animationController?.repeat(reverse: true);
+
+    nextpage();
   }
 
   @override
@@ -56,4 +62,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ),
     );
   }
+}
+
+void nextpage() {
+  Future.delayed(Duration(seconds: 3), () {
+    Get.to(() => OnBoardingView(), transition: Transition.leftToRight);
+  });
 }
