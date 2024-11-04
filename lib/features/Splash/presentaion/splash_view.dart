@@ -1,4 +1,4 @@
-import 'package:e_commerce/core/Widgets/Constant.dart';
+import 'package:e_commerce/Constant.dart';
 import 'package:e_commerce/features/Splash/presentaion/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 

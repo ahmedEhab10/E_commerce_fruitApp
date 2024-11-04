@@ -1,4 +1,4 @@
-import 'package:e_commerce/core/Widgets/Constant.dart';
+import 'package:e_commerce/Constant.dart';
 import 'package:e_commerce/core/utils/Size_config.dart';
 import 'package:flutter/material.dart';
 

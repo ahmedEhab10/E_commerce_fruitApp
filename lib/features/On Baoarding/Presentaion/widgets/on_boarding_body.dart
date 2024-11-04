@@ -1,5 +1,7 @@
 import 'package:e_commerce/core/Widgets/Custom_buttons.dart';
+import 'package:e_commerce/core/Widgets/custom_page_view.dart';
 import 'package:e_commerce/core/utils/Size_config.dart';
+import 'package:e_commerce/features/On%20Baoarding/Presentaion/widgets/Custom_indicator.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingBody extends StatelessWidget {
@@ -10,6 +12,12 @@ class OnBoardingBody extends StatelessWidget {
     SizeConfig().init(context);
     return Stack(
       children: [
+        CustomPageView(),
+        Positioned(
+            right: 0,
+            left: 0,
+            bottom: SizeConfig.defaultSize! * 20,
+            child: CustomIndicator()),
         Positioned(
           top: SizeConfig.defaultSize! * 10,
           right: 32,
@@ -26,7 +34,7 @@ class OnBoardingBody extends StatelessWidget {
           child: const CustomGenralButtons(
             text: 'Next',
           ),
-        )
+        ),
       ],
     );
   }
