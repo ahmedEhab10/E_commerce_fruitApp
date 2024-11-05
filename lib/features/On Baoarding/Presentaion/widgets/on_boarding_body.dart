@@ -1,8 +1,10 @@
 import 'package:e_commerce/core/Widgets/Custom_buttons.dart';
 import 'package:e_commerce/core/Widgets/custom_page_view.dart';
 import 'package:e_commerce/core/utils/Size_config.dart';
+import 'package:e_commerce/features/Auth/Presentaion/Pages/Login/login_view.dart';
 import 'package:e_commerce/features/On%20Baoarding/Presentaion/widgets/Custom_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OnBoardingBody extends StatefulWidget {
   const OnBoardingBody({super.key});
@@ -46,10 +48,17 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
             visible: pageController!.hasClients
                 ? (pageController!.page! > 1.8 ? false : true)
                 : true,
-            child: const Text(
-              'Skip',
-              style: TextStyle(
-                  fontSize: 22, color: Color.fromARGB(249, 101, 95, 95)),
+            child: GestureDetector(
+              onTap: () {
+                pageController!.animateToPage(2,
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.bounceInOut);
+              },
+              child: const Text(
+                'Skip',
+                style: TextStyle(
+                    fontSize: 22, color: Color.fromARGB(249, 101, 95, 95)),
+              ),
             ),
           ),
         ),
@@ -58,6 +67,17 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
           right: 100,
           left: 100,
           child: CustomGenralButtons(
+            onTap: () {
+              if (pageController!.page == 2) {
+                Get.to(LoginView(),
+                    duration: const Duration(milliseconds: 300),
+                    transition: Transition.rightToLeft);
+              } else {
+                pageController!.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.bounceInOut);
+              }
+            },
             text: pageController!.hasClients
                 ? (pageController!.page! > 1.8 ? 'Get Start' : 'Next')
                 : 'Next',
