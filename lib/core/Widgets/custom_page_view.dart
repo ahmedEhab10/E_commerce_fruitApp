@@ -3,11 +3,13 @@ import 'package:e_commerce/core/utils/Size_config.dart';
 import 'package:flutter/material.dart';
 
 class CustomPageView extends StatelessWidget {
-  const CustomPageView({super.key});
+  CustomPageView({super.key, required this.pageController});
+  PageController? pageController;
 
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: const [
         PageViewItem(
           imagee: 'assets/images/onboarding1.png',

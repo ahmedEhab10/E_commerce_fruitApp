@@ -3,13 +3,14 @@ import 'package:e_commerce/Constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomIndicator extends StatelessWidget {
-  const CustomIndicator({super.key});
+  CustomIndicator({super.key, required this.dotindex});
+  double? dotindex;
 
   @override
   Widget build(BuildContext context) {
     return DotsIndicator(
       dotsCount: 3,
-      position: 0,
+      position: dotindex!.round(),
       decorator: DotsDecorator(
         activeColor: kMainColor,
         color: Colors.transparent,
