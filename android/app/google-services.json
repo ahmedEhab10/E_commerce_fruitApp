@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1034897241817",
+    "project_id": "frutre-app",
+    "storage_bucket": "frutre-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034897241817:android:308058aa570f1526d430c8",
+        "android_client_info": {
+          "package_name": "com.example.e_co"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIc2d1EjlerzAcjlKRx1m65wjGhKimlUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
